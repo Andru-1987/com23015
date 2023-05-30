@@ -1,8 +1,11 @@
 """
+EXERCISE TEXTO
+para pasar a un funcion
 Diseñar un programa que permita ingresar un texto, separarlo mediante la función
 split() en una lista y obtener una nueva lista con las palabras ordenadas por el
 tamaño de cada cadena.
 """
+
 # texto = input('ingrese un texto')
 # otra forma de doc strings aplicado en python
 
