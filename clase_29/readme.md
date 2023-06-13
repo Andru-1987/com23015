@@ -8,8 +8,25 @@ Clases y objetos:
 Que son las clases ? son blueprints o plantillas de creación de objetos
 
 
-
 ```
+JS ==>{
+
+class <Combre>{
+    atributos_clase
+
+    constructor(.......){
+        this.algo = algo 
+    }
+
+    getMethod(){
+        
+    }
+}
+
+
+}
+
+
 
 class <nombre_clase>:
     atributos de clase

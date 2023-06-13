@@ -6,10 +6,10 @@ Que propiedades tienen los objetos. Conceptos básicos e importantes en OOPs
 
 ![image OOPS-conceptos](./imagenes/oop_concepts.jpeg)
 
-- Encapsulamiento
-- Abstraccion
-- Herencia
-- Polimorfismo
+- [Encapsulamiento](https://www.fundamentosprogramacion.site/2023/01/que-es-la-encapsulacion-en-programacion.html)
+- [Abstraccion](https://pythondiario.com/2018/08/clases-abstractas-ejemplos-practicos.html)
+- [Herencia](https://www.programacionfacil.org/cursos/python_poo/python_poo_7_herencia_de_clases_como_utilizar_super.html)
+- [Polimorfismo]()
 
 ---
 * Metodos de acceso
@@ -33,3 +33,5 @@ Bibliofia extra:
 > [OOPS](https://picodotdev.github.io/blog-bitix/2021/03/los-conceptos-de-encapsulacion-herencia-polimorfismo-y-composicion-de-la-programacion-orientada-a-objetos/)
 
 > [DEPENDECY INJECTION](https://pywombat.com/articles/dependency-injection-python)
+
+> [BUENAS PRACTICAS RECOMENDADAS](https://gimscop.github.io/good_programming_practices/lecture.slides.html#/)
