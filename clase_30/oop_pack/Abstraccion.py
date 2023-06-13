@@ -11,37 +11,27 @@ from abc import ABC
 
 class PersonaAbstracta(ABC):
 
-    __dni = None
-    __tramite = None
-
     def __init__(self,**kwargs):
         self.nombre = kwargs.get("nombre","unknown")
         self.email = kwargs.get("email","unknown")
         self.nacionalidad = kwargs.get("nacionalidad","unknown")
-
     
-    @abc.abstractmethod
-    def set_dni(self,dni):
-        ...
-    @abc.abstractmethod
-    def get_dni(self):
-        ...
-    @abc.abstractmethod
-    def set_tramite(self,tramite):
-        ...
-    @abc.abstractmethod
-    def get_tramite(self):
-        ...
+    @property
+    def dni(self):
+        pass
 
+    @property
+    def tramite(self):
+        pass
 
 
 # Es el heredado de una clase anterior
 # class Jugador(Persona):  # cualquier clase
 class Jugador(PersonaAbstracta):  # cualquier clase
     def __init__(self,**kwargs):
+        super().__init__(**kwargs)
         self.club = kwargs.get("club","no creado")
         self.status = kwargs.get("status", True)
-        super().__init__(**kwargs)
 
     def __str__(self):
 
@@ -51,8 +41,8 @@ class Jugador(PersonaAbstracta):  # cualquier clase
         Nombre:     {self.nombre}
         Email:      {self.email}
         Nac.:       {self.nacionalidad}
-        dni :       {self.get_dni()}
-        tramite:    {self.get_tramite()}
+        dni :       {self.dni}
+        tramite:    {self.tramite}
         ==========================
 
         Club:       {self.club}
@@ -63,15 +53,3 @@ class Jugador(PersonaAbstracta):  # cualquier clase
     def get_status(self):
         return "SIGO JUGANDO" if self.status else "NO JUEGO MAS"
 
-      
-    def set_dni(self,dni):
-        self.__dni = dni
-    
-    def get_dni(self):
-        return self.__dni
-    
-    def set_tramite(self,tramite):
-        self.__tramite = tramite
-    
-    def get_tramite(self):
-        return self.__tramite

@@ -7,7 +7,9 @@ Que propiedades tienen los objetos. Conceptos básicos e importantes en OOPs
 ![image OOPS-conceptos](./imagenes/oop_concepts.jpeg)
 
 - [Encapsulamiento](https://www.fundamentosprogramacion.site/2023/01/que-es-la-encapsulacion-en-programacion.html)
-- [Abstraccion](https://pythondiario.com/2018/08/clases-abstractas-ejemplos-practicos.html)
+- [Abstraccion](https://pythondiario.com/2018/08/clases-abstractas-ejemplos-practicos.html) | [ABS](https://towardsdatascience.com/how-to-use-abstract-classes-in-python-d4d2ddc02e90)
+
+
 - [Herencia](https://www.programacionfacil.org/cursos/python_poo/python_poo_7_herencia_de_clases_como_utilizar_super.html)
 - [Polimorfismo]()
 
@@ -20,11 +22,18 @@ Que propiedades tienen los objetos. Conceptos básicos e importantes en OOPs
     - [HERENCIA SIMPLE Y MULTIPLE](https://unipython.com/herencia-multiple-de-clases-en-python/)
     
 * Que es la colaboracione entre clases?
-    - [DATA EXTRA](https://www.seas.es/blog/informatica/agregacion-vs-composicion-en-diagramas-de-clases-uml/)
 
-    - Composición ? -> Como componer una clase => persona necesita brazos y piernas
-    - Agregacion ? --> Una persona necesita tener pantalon? No pero se los decoras
-    - Asociación ? --> La persona, necesita necesariamente tarjetas de credito o un auto?, no pero se les puede asociar.
+
+Relaciones estructurales
+--- 
+
+
+- [DATA EXTRA](https://www.seas.es/blog/informatica/agregacion-vs-composicion-en-diagramas-de-clases-uml/)
+
+- [ESTRUCTURAS](https://www.edrawsoft.com/es/article/uml-aggregation-vs-composition.html)
+- Composición ? -> Como componer una clase => persona necesita brazos y piernas
+- Agregacion ? --> Una persona necesita tener pantalon? No pero se los decoras
+- Asociación ? --> La persona, necesita necesariamente tarjetas de credito o un auto?, no pero se les puede asociar.
     
 
 
