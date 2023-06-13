@@ -11,7 +11,9 @@ Que propiedades tienen los objetos. Conceptos básicos e importantes en OOPs
 
 
 - [Herencia](https://www.programacionfacil.org/cursos/python_poo/python_poo_7_herencia_de_clases_como_utilizar_super.html)
-- [Polimorfismo]()
+- [Polimorfismo](
+    https://ellibrodepython.com/polimorfismo-en-programacion
+)
 
 ---
 * Metodos de acceso

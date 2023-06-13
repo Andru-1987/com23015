@@ -6,7 +6,7 @@ from oop_pack.Encapsulacion import Persona
 '''
 HERENCIA ABSTRACTA
 '''
-import abc
+from abc import abstractmethod
 from abc import ABC
 
 class PersonaAbstracta(ABC):
@@ -15,13 +15,16 @@ class PersonaAbstracta(ABC):
         self.nombre = kwargs.get("nombre","unknown")
         self.email = kwargs.get("email","unknown")
         self.nacionalidad = kwargs.get("nacionalidad","unknown")
+        
     
     @property
+    @abstractmethod
     def dni(self):
         pass
 
-    @property
-    def tramite(self):
+    @dni.setter
+    @abstractmethod
+    def dni(self,dni):
         pass
 
 
@@ -33,6 +36,7 @@ class Jugador(PersonaAbstracta):  # cualquier clase
         self.club = kwargs.get("club","no creado")
         self.status = kwargs.get("status", True)
 
+
     def __str__(self):
 
         return f"""
@@ -41,14 +45,21 @@ class Jugador(PersonaAbstracta):  # cualquier clase
         Nombre:     {self.nombre}
         Email:      {self.email}
         Nac.:       {self.nacionalidad}
-        dni :       {self.dni}
-        tramite:    {self.tramite}
+        
         ==========================
 
         Club:       {self.club}
         Status:     {self.status}
         """
 
+       
+    @property
+    def dni(self):
+        return self._dni
+
+    @dni.setter
+    def dni(self,dni):
+        self._dni = dni
 
     def get_status(self):
         return "SIGO JUGANDO" if self.status else "NO JUEGO MAS"
