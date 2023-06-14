@@ -30,28 +30,36 @@ class InsertOp:
 class CrudApp:
 
     table_name =  MYSQL_TABLE
+    
 
     def __init__(self,**kwargs):
 
+        self.tabla_creada = False
+        self.db = kwargs["db"]
         try:
             self.cnx = pymysql.connect(
-                url =  kwargs["url"],
-
+                
+                user = kwargs["user"],
+                host = kwargs["host"],
+                password =kwargs["password"],
+                db = self.db
             )
-            self.tabla_creada = False
+            print("Conexion establecida")
             self.cursor = self.cnx.cursor()
         except Exception as Error:
             print(Error)
 
-    def crear_table(self):
-        if not self.tabla_creada:
-            print(" TABLA YA FUE CREADA")
-            return
+    def crear_table(self,table_name):
+        self.table_name = table_name
+
+        # if not self.tabla_creada:
+        #     print(" TABLA YA FUE CREADA")
+        #     return
 
         print("Se esta creando la tabla")
 
         query = f"""
-        CREATE TABLE {self.table_name} (
+        CREATE TABLE {self.db}.{self.table_name} (
                         user_id INT NOT NULL AUTO_INCREMENT,
                         nombre VARCHAR(255) NOT NULL,
                         email VARCHAR(255) NOT NULL,
@@ -68,6 +76,9 @@ class CrudApp:
 
 
 crud = CrudApp(
-    url    =   MYSQL_URL
-
+                host = MYSQLHOST,
+                password = MYSQLPASSWORD,
+                port = MYSQLPORT,
+                user = MYSQLUSER,
+                db = MYSQLDATABASE
 )
