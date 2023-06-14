@@ -42,8 +42,10 @@ class CrudApp:
                 user = kwargs["user"],
                 host = kwargs["host"],
                 password =kwargs["password"],
-                db = self.db
+                cursorclass = pymysql.cursors.DictCursor
             )
+
+            self.cnx = pymysql.connect(MYSQL_URL)
             print("Conexion establecida")
             self.cursor = self.cnx.cursor()
         except Exception as Error:
