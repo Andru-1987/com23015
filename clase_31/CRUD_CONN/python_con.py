@@ -10,8 +10,7 @@ import pymysql
 import os
 
 
-from CRUD_CONN.data_protegida import    MYSQL_URL,\
-                                        MYSQLDATABASE,\
+from CRUD_CONN.data_protegida import    MYSQLDATABASE,\
                                         MYSQLHOST,\
                                         MYSQLPASSWORD,\
                                         MYSQLPORT,\
@@ -41,8 +40,7 @@ class CrudApp:
                 
                 user = kwargs["user"],
                 host = kwargs["host"],
-                password =kwargs["password"],
-                cursorclass = pymysql.cursors.DictCursor
+                password =kwargs["password"]
             )
 
             self.cnx = pymysql.connect(MYSQL_URL)
