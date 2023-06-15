@@ -18,22 +18,17 @@ from CRUD_CONN.data_protegida import    MYSQLDATABASE,\
                                         MYSQL_TABLE
 
 
-
-class InsertOp:
-    def insert_data(self):
-        pass
+from CRUD_CONN.Logica import InsertUser,DeleteUser,ShowUsers,UpdateUser,ShowUser
 
 
-
-
-class CrudApp:
+class CrudApp(InsertUser,DeleteUser,ShowUsers,UpdateUser,ShowUser):
 
     table_name =  MYSQL_TABLE
     
 
     def __init__(self,**kwargs):
 
-        self.tabla_creada = False
+        
         self.db = kwargs["db"]
         try:
             self.cnx = pymysql.connect(
@@ -43,36 +38,36 @@ class CrudApp:
                 password =kwargs["password"]
             )
 
-            self.cnx = pymysql.connect(MYSQL_URL)
+            
             print("Conexion establecida")
             self.cursor = self.cnx.cursor()
+
+            # creando la tabla y la base de datos
+
+            print("Se genera la base de datos y la tabla")
+
+            db_create = f"""
+            CREATE DATABASE IF NOT EXISTS {self.db};
+            """
+
+            self.cursor.execute(db_create)
+            self.cnx.commit()
+
+            query = f"""
+            CREATE TABLE IF NOT EXISTS {self.db}.{self.table_name}(
+                            user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                            nombre VARCHAR(255) NOT NULL,
+                            email VARCHAR(255) NOT NULL UNIQUE,
+                            password VARCHAR(255) NOT NULL
+                            
+            );
+            """
+            self.cursor.execute(query)
+            self.cnx.commit()
+
         except Exception as Error:
             print(Error)
 
-    def crear_table(self,table_name):
-        self.table_name = table_name
-
-        # if not self.tabla_creada:
-        #     print(" TABLA YA FUE CREADA")
-        #     return
-
-        print("Se esta creando la tabla")
-
-        query = f"""
-        CREATE TABLE {self.db}.{self.table_name} (
-                        user_id INT NOT NULL AUTO_INCREMENT,
-                        nombre VARCHAR(255) NOT NULL,
-                        email VARCHAR(255) NOT NULL,
-                        edad INT(11),
-                        PRIMARY KEY (user_id)    
-        """
-        self.cursor.execute(query)
-        self.cnx.commit()
-        self.cursor.close()
-        self.cnx.close()
-        self.tabla_creada = True
-
-        print("Se ha creado la tabla ...")
 
 
 crud = CrudApp(
