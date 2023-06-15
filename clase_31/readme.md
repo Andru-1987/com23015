@@ -14,9 +14,11 @@ DONDE USAMOS LOS PAQUETES DE PYTHON??
 
 *   GENERAR UN PAR DE CONCEPTOS NECESARIOS
 
-    -   CONECTOR A UNA BASE DE DATOS (USANDO LOS GENERADOS POR UN PACKETE DE PYTHON Y QUE NOS PERMITA CONECTAR) (en este caso vamos a hacer de manera realista)
-    -   ELECCION ==> [plataforma de railway](https://railway.app/)
-    -   Obtenemos los datos de conexion a esa base de datos lo cual necesitamos una URI | PORT | PASS | USER
+    -   CONECTOR A UNA BASE DE DATOS (USANDO LOS GENERADOS POR UN PAQUETE DE PYTHON Y QUE NOS PERMITA CONECTAR) (en este caso vamos a hacer de manera realista)
+
+    -   ELECCION ==> [plataforma de railway](https://railway.app/) ==> PERO A VECES TRAE PROBLEMAS CON LAS CONEXIONES EXTERNAS (NO DEL TODO RECOMENDADO TEMPORALMENTE)
+
+    -   Obtenemos los datos de conexion a esa base de datos lo cual necesitamos una PORT | PASS | USER
 
 *   GENERAR UN GESTOR DE USUARIOS
 
@@ -25,6 +27,3 @@ DONDE USAMOS LOS PAQUETES DE PYTHON??
 *   DISTINTAS FORMAS :
 
     -   USANDO PY-MYSQL ==> FORMA BÁSICA USANDO CONSTRUCTORES DE QUERIES
-    -   USANDO SQLALCHEMY ==> FORMA PROTEGIDA USANDO UNA ORM
-
-*
