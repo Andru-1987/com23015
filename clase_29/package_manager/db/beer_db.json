@@ -1,0 +1,14 @@
+[
+    {
+        "beer_id": "3b515f1a-1485-4785-afa8-c2c7ac4f1e6e",
+        "nombre": "Ale Sergi Beer",
+        "abv": 12,
+        "url": "https://http2.mlstatic.com/D_NQ_NP_606833-MLA49413950187_032022-O.webp"
+    },
+    {
+        "beer_id": "e120d7c5-03ab-499a-9538-2604248f6abb",
+        "nombre": "ginger ale",
+        "abv": 14,
+        "url": "https://www.acouplecooks.com/wp-content/uploads/2020/08/Ginger-Beer-001.jpg"
+    }
+]

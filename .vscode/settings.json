@@ -1,0 +1,5 @@
+{
+    "Prettier-SQL.keywordCase": "upper",
+    "Prettier-SQL.linesBetweenQueries": 2,
+    "Prettier-SQL.SQLFlavourOverride": "mysql"
+}
