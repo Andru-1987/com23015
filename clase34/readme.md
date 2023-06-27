@@ -43,6 +43,13 @@ Forma manual entendiendo los pasos generales.
     - el virtualenv => /home/andersonCodo/.virtualenvs/venv
 
     - con esa información ahora podemos ir al sector de web de pythonanywhere > en este caso como es manual vamos a usar una configuracion manual > seleccionamos la version de python 3.10 > con este caso vamos a utilizar archivos como el wsgi de django
+
+
+- sector Code :
+    - Source code: 
+        
+
+
 - modificacion del wsgi_file:
 
 ```
