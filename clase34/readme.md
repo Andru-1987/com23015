@@ -85,6 +85,41 @@ application = get_wsgi_application()
     -   python manage.py collectstatic
         - seleccionamos la opcion de "yes" para  hacer una collect de los statics
 
-- Por ultimo lo agregamos al sector de Static files del dashboar    
+- Por ultimo lo agregamos al sector de Static files del dashboard    
+    - /home/andersonCodo/vinoteca_django_deploy/vinoteca/static
+
+- Paso final hacemos un reload para cargar la nueva versión.
 
 
+
+Integracion con una base de datos en PythonAnyWhere
+---
+
+- Creacion de una database en el sector de Database
+    nombre_de_usuario = andersonCodo
+
+
+    host : <nombre_de_usuario>.mysql.pythonanywhere-services.com
+    username : <nombre_de_usuario>
+    port : 3306
+    password : vinoteca1234
+    database : <nombre_de_usuario>$vinoteca
+
+-   Integracion en settings.py
+
+    ```
+    DATABASES = {
+    'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'vinoteca',
+                'USER': 'admin_user',
+                'PASSWORD': 'vinoteca1234',
+                'HOST': 'andersonCodo.mysql.pythonanywhere-services.com',
+                'PORT': '3306',
+            }
+    }
+    ```
+
+- Hacer la migración:
+    - python manage.py makemigrations
+    - python manage.py migrate
