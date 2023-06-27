@@ -11,8 +11,8 @@ Deploy en PythonAnywhere
 - Generar una API token
 
 - Generar una consola en la dashboard , es necesario entender que es una máquina virtual en donde se está colocando el codigo como elemento necesario para poder levantarlo como elemento único a usar en ese entorno.
-    - New Console >> Bash
-
+    - New Console >> Bash\
+    <img src="./images/dashboard_console.png" width="300"/>
 
 Steps en la máquina virtual
 ---
@@ -46,8 +46,9 @@ Forma manual entendiendo los pasos generales.
 
 
 - sector Code :
-    - Source code: 
-        
+
+    - Source code: (el path de la carpeta donde estaría el proyecto)
+        - /home/andersonCodo/vinoteca_django_deploy/vinoteca
 
 
 - modificacion del wsgi_file:
