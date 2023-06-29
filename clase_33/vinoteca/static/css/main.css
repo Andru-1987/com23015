@@ -19,6 +19,8 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     flex: 1;
+
+    color: white;
 }
 
 header {
@@ -186,8 +188,4 @@ input {
     flex-direction: row;
     width: 30rem;
     justify-content: space-between;
-}
-
-input[type="submit"] {
-    width: 10rem;
 }

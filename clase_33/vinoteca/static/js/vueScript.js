@@ -100,7 +100,6 @@ let app = {
                 "VUE",
                 "GITHUB-GIT",
                 "POWER BI",
-                "DJANGO",
             ],
             intro: "Mi nombre es Anderson, soy docente , programador y analista de datos",
             value: null,
@@ -115,6 +114,7 @@ let app = {
     components: {
         "sector-component": sector,
     },
+
     delimiters: ["--", "--"],
 };
 
